@@ -4,5 +4,6 @@
     {
         public string NombreUsuario { get; set; }
         public string Contrasenia { get; set; }
+        public string Id { get; set; }
     }
 }
