@@ -1,7 +1,7 @@
 ﻿namespace ProyectoGenOmint.Models
 
 {
-    public class Persona
+    public class PersonaRandomService
     {
         private static Random random = new Random();
 

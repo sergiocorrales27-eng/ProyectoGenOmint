@@ -3,7 +3,7 @@ using System;
 
 namespace Negocio
 {
-    public class UsuarioNegocio
+    public class UserRandomService
     {
         private static Random random = new Random();
 

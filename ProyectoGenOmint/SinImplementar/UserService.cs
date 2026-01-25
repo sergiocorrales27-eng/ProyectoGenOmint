@@ -1,6 +1,6 @@
-﻿namespace ProyectoGenOmint.Services
-{
-    public class UserService
-    {
-    }
-}
+﻿//namespace ProyectoGenOmint.Services
+//{
+//    public class UserService
+//    {
+//    }
+//}
