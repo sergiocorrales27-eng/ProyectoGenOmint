@@ -1,6 +1,9 @@
-﻿namespace ProyectoGenOmint.Services
+﻿using ProyectoGenOmint.Models;
+
+namespace ProyectoGenOmint.Services
 {
-    public class IUserRandomService
+    public interface IUserRandomService
     {
+        User GenerarUsuarioRandom();
     }
 }
