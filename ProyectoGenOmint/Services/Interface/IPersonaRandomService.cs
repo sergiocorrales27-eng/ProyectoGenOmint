@@ -1,6 +1,6 @@
 ﻿using ProyectoGenOmint.Models;
 
-namespace ProyectoGenOmint.Services
+namespace ProyectoGenOmint.Services.Interface
 {
     public interface IPersonaRandomService
     {

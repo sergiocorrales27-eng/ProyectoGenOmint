@@ -1,8 +1,6 @@
-//implementacion del patron de inyeccion de dependencia
-
 using Microsoft.AspNetCore.Mvc;
-using ProyectoGenOmint.Controllers;
-using ProyectoGenOmint.Services;
+using ProyectoGenOmint.Models;
+using ProyectoGenOmint.Services.Interface;
 
 namespace ProyectoGenOmint.Controllers
 {
@@ -12,9 +10,20 @@ namespace ProyectoGenOmint.Controllers
     {
 
         private readonly ILogger<UserController> _logger;
+        private readonly IUserRandomService _UserRandomService;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(ILogger<UserController> logger, IUserRandomService UserRandomService)
         {
             _logger = logger;
+            _UserRandomService = UserRandomService;}
+    [HttpGet]
+    [Route("user-test")]
+    public User Test()
+        {
+            return _UserRandomService.GenerarUsuarioRandom();
         }
-    } }
+    
+    }
+  
+}
+
