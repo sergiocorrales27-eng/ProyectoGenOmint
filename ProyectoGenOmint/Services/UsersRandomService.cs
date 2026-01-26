@@ -1,10 +1,11 @@
 
 using ProyectoGenOmint.Models;
+using ProyectoGenOmint.Services.Interface;
 using System;
 
 namespace Negocio
 {
-    public class UserRandomService
+    public class UserRandomService : IUserRandomService
     {
         private static Random random = new Random();
 
