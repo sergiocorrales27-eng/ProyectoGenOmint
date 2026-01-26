@@ -17,7 +17,7 @@ namespace ProyectoGenOmint.Controllers
             _logger = logger;
             _UserRandomService = UserRandomService;}
     [HttpGet]
-    [Route("user-test")]
+    [Route("Random")]
     public User Test()
         {
             return _UserRandomService.GenerarUsuarioRandom();

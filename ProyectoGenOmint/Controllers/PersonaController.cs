@@ -18,7 +18,7 @@ namespace ProyectoGenOmint.Controllers
             _PersonaRandomService = PersonaRandomService;
         }
         [HttpGet]
-        [Route("Persona-test")]
+        [Route("Random")]
         public Persona Test()
         {
             return _PersonaRandomService.GenerarPersonaRandom();
