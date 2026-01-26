@@ -1,13 +1,15 @@
-using Entidades;
+
+using ProyectoGenOmint.Models;
+using ProyectoGenOmint.Services.Interface;
 using System;
 
 namespace Negocio
 {
-    public class UsuarioNegocio
+    public class UserRandomService : IUserRandomService
     {
         private static Random random = new Random();
 
-        public Usuario GenerarUsuarioRandom()
+        public User GenerarUsuarioRandom()
         {
             string[] nombresBase = { "Tomas", "Franco", "Juan", "Milagros", "Anna" };
 
@@ -19,10 +21,10 @@ namespace Negocio
             int id = GenerarIdRandom();
 
 
-            return new Usuario
+            return new User
             {
                 NombreUsuario = nombreUsuario,
-                Contraseña = contraseña,
+                Contrasenia = contraseña,
                 Id = id
 
             };
@@ -42,6 +44,7 @@ namespace Negocio
         }
         private int GenerarIdRandom()
         {
+            
             return random.Next(10_000_000, 99_000_000);
         }
     }

@@ -1,7 +1,10 @@
-﻿namespace ProyectoGenOmint.Models
+﻿using ProyectoGenOmint.Services.Interface;
+
+namespace ProyectoGenOmint.Models
+
 
 {
-    public class Persona
+    public class PersonaRandomService : IPersonaRandomService
     {
         private static Random random = new Random();
 
