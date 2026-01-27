@@ -1,6 +1,7 @@
-using ProyectoGenOmint.Services.Interface;
-using ProyectoGenOmint.Models;
 using Negocio;
+using ProyectoGenOmint.Models;
+using ProyectoGenOmint.Services;
+using ProyectoGenOmint.Services.Interface;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,7 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPersonaRandomService,PersonaRandomService>();
 builder.Services.AddScoped<IUserRandomService, UserRandomService>();
-
+builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IPersonaRandomService, PersonaRandomService>();
+builder.Services.AddScoped<IUserRandomService, UserRandomService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
